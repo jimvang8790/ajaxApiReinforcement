@@ -67,3 +67,5 @@ function docReady() {
   }); // end of forth $.ajax
 
 } // end of the docReady function
+
+console.log('testing git hub');
