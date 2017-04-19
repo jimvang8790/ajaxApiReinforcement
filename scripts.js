@@ -16,7 +16,9 @@ function docReady() {
         console.log('this is the movie title', response.Title);
 
         // will append the movie title requested to the DOM b/c id(movies) is the div *NOTE must capitalize Title b/c OMPb has it capitalize!!!
-        $('#movies').append(response.Title);
+        var $newDiv = $('<div class="color-div"></div>'); // to append vertically to the DOM
+        $newDiv.append(response.Title); // to append vertically to the DOM
+        $('#movies').append($newDiv);
 
       } // end of the success function(response)
   }); // end of the first $.ajax
@@ -25,13 +27,22 @@ function docReady() {
   $.ajax({
       url: 'http://www.omdbapi.com/?t=the+dark+knight',
       success: function(responseSec) {
-        console.log('this is the  second response from OMDb', responseSec);
         console.log('this is the movie poster img link', responseSec.Poster);
         // adding an img element to append to the div and giving it a source that will request the poster URL from OMDb sever
-        $('#movies').append( '<img src="'+ responseSec.Poster +'">');
+        var $newDiv = $('<div class="color-div"></div>'); // to append vertically to the DOM
+        $newDiv.append('<img src="'+ responseSec.Poster +'">');
+        $('#movies').append($newDiv);
       } // end of the success function(responseSec)
   }); // end of the second $.ajax
 
-} // end of the docReady function
 
-// $('#moveies').append('<img src="">');
+  $.ajax({
+    url: 'http://www.omdbapi.com/?t=the+dark+knight',
+    success: function(responseThird) {
+      console.log('this is the movie relase date', responseThird.Plot);
+      var $newDiv = $('<div class="color-div"></div>'); // to append vertically to the DOM
+      $newDiv.append(responseThird.Plot);
+      $('#movies').append($newDiv);
+    }
+  });
+} // end of the docReady function
