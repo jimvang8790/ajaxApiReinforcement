@@ -1,8 +1,33 @@
-.color-div{
-  background-color: white;
+html {
+    height: 100%; /* Helps with centering and scaling the background image */
 }
 
-div,
-h1 {
+body {
+  background-image: url(http://static.simpledesktops.com/uploads/desktops/2014/10/07/hex-000097.png);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1  {
   text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 3em;
+  color: #eaf4ef;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 2em;
+  color: #eaf4ef;
+}
+
+div {
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #eaf4ef;
 }
