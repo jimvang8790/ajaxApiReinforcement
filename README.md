@@ -16,7 +16,7 @@ If you have extra time, use CSS to make it look fancy!
 
 **Coding!**
 
-- [] Make a request to the OMDb API to get a movie
-- [] Then display the movie poster and title to the DOM
+- [x] Make a request to the OMDb API to get a movie
+- [x] Then display the movie poster and title to the DOM
 - [] *extra-credit* display more info about the movie
-- [] *extra-credit* added some styles 
+- [] *extra-credit* added some styles
