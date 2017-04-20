@@ -30,7 +30,7 @@ function docReady() {
         console.log('this is the movie poster img link', responseSec.Poster);
         // adding an img element to append to the div and giving it a source that will request the poster URL from OMDb sever
         var $newDiv = $('<div></div>'); // to append vertically to the DOM
-        $newDiv.append('<img src="'+ responseSec.Poster +'">');
+        $newDiv.append('<img src="'+ responseSec.Poster +'">'); //creating a img tag and sorcing from OMDb server but concatating it
         $('#movies').append($newDiv);
       } // end of the success function(responseSec)
   }); // end of the second $.ajax
